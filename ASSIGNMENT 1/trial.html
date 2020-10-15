@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@900&display=swap" rel="stylesheet">
+    <title>Applying Styles to html</title>
+    
+    <style>
+        body{
+            background-color: black;
+            color: WHITE;
+        }
+        header{
+            margin:0;
+            top:0;
+            left:0;
+            right:0;
+
+        }
+        h1{
+            background-color:#373a40;
+            font-family: 'Sansita Swashed', cursive;
+            color: white;
+            text-align: center;
+            /*padding: 30;*/
+            margin: 0px;  
+        }
+        nav{
+            background-color: red;
+            color: antiquewhite;
+            padding: 15px;
+            border: 2px;
+            margin: 10px;
+            text-align: center;
+        }
+        a{
+            width: 10px;
+            color: white;
+           /* background-color: yellow;*/
+            padding: 10px;
+            /*margin: auto;*/
+        }
+       
+        section{
+            text-align: center;
+        }
+        h2{
+            color: white;
+            border: 0px lightyellow;
+            font-family: 'Sansita Swashed', cursive;
+            text-align: center;
+            
+        }
+        footer{
+            text-align: center;
+            color: white;
+            bottom: 0px;
+            position: fixed;
+
+        }
+        img{
+            width:80%;
+            height:400px;
+            text-align: center;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+             width: 50%;
+        }
+        .dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+    </style>
+</head>
+<body>
+    <h1>SUNSHINE RESORTS</h1>
+    <header>
+        <nav>
+            <a href="trial.html">HOMEPAGE</a>
+            <a href="./about.html">ABOUT</a>
+            <a href="./forms.html">ENQUIRIES</a>
+
+        </nav>
+    </header>
+    <div class="slideshow-container" align="center">
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="resort1.jpg" style="width: 50%;">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="room.jpg" style="width:50%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="room2.jpg" style="width:50%">
+          <div class="text"></div>
+        </div>
+        
+        </div>
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+          </div>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+        <hr/>
+        <div>
+            <p align="center">
+               ABOUT US
+            </p>
+                <p>
+                Sunshine resorts is a chain of luxury hotels and a subsidiary of the sun Company Limited. headquartered at Express Towers, Nariman Point in cehnnai. Incorporated by the founder of the Tata Group, Jamsetji Tata, in 1903, the company is a part of the Tata Group, one of India's largest business conglomerates. The company employed over 20,000 people in the year 2010.
+                As of 2020, the company operates a total of 100 plus hotels and hotel-resorts, with 84 across India and 16 in other countries, including Bhutan, Malaysia, Maldives, Nepal, South Africa, Sri Lanka, UAE, UK, USA and Zambia.
+            </p>
+        </div>
+    <footer align="center">
+        <h5>&copy;Copyright Sunshine resort</h5>
+    </footer>
+</body>
+</html>
